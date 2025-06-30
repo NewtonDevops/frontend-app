@@ -5,8 +5,8 @@ Calls the Python backend Service (`backend:8080`) and prints the JSON message.
 Clone the project
 
 ```bash
-git clone
-cd 
+git clone https://github.com/NewtonDevops/frontend-app.git
+cd frontend-app
 ```
 
 ## Build locally (or inside Minikube)
