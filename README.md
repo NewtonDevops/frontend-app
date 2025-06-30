@@ -2,6 +2,13 @@
 
 Calls the Python backend Service (`backend:8080`) and prints the JSON message.
 
+Clone the project
+
+```bash
+git clone
+cd 
+```
+
 ## Build locally (or inside Minikube)
 
 ```bash
@@ -9,6 +16,8 @@ Calls the Python backend Service (`backend:8080`) and prints the JSON message.
 eval $(minikube docker-env)
 
 docker build -t frontend-app:latest .
+
+```
 
 ---
 
