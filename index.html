@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Helm Demo Frontend</title>
+  <style>
+    body { font-family: Arial, sans-serif; margin: 2rem; }
+    #msg { font-size: 1.4rem; color: #22863a; }
+    #err { color: #d73a49; }
+  </style>
+</head>
+<body>
+  <h1>Kubernetes Multi‑Tier Demo</h1>
+
+  <p>Backend response:</p>
+  <pre id="msg">⏳ Loading…</pre>
+  <pre id="err"></pre>
+
+  <script>
+    // Call the backend Service inside the cluster
+    fetch("http://nginx.local:8080/backend/")
+      .then(r => r.json())
+      .then(({ message }) => {
+        console.log("Response from backend:", message);
+        document.getElementById('msg').innerText = message;
+
+    })
+      .catch(err => {
+        document.getElementById("err").textContent = "Error: " + err;
+      });
+  </script>
+</body>
+</html>
