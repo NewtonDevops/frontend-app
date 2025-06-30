@@ -12,7 +12,6 @@ cd frontend-app
 ## Build locally (or inside Minikube)
 
 ```bash
-# Use Minikube's Docker daemon so Pods can pull image without a registry
 eval $(minikube docker-env)
 
 docker build -t frontend-app:latest .
